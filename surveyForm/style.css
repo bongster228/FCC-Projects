@@ -10,12 +10,12 @@
 }
 
 body {
-    background-color: deepskyblue
+    background-color: salmon;
 }
 
 .form-outline {
     margin: 0 auto;
-    background-color: rgb(194, 194, 194);
+    background-color: whitesmoke;
     color: rgb(41, 41, 41);
     max-width: 900px;
     border-radius: 20px;
