@@ -10,25 +10,46 @@
         <div class="form-outline">
             <p id="description">Feel free to share your criminal activities</p>
             <form id="survey-form">
-                <div>
+
+
+                <div class="rowTab">
+                    <div class="labels">
                     <label id="name-label" for="name">Name: 
-                        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+                        </div>
+                    <div class="rightTab">
+                        <input class="input-field" id="name" name="name" type="text" placeholder="Enter your name" required>
                     </label>
+                    </div>
                 </div>
-                <div>
-                    <label id="email-label" for="email">Email: 
-                        <input id="email" name="email" type="email" placeholder="Enter your email" required>
-                    </label>
+
+                <div class="rowTab">
+                    <div class="labels">
+                        <label id="email-label" for="email">Email: 
+                    </div>
+                    <div class="rightTab">
+                            <input class="input-field" id="email" name="email" type="email" placeholder="Enter your email" required>
+                        </label>
+                    </div>
                 </div>
-                <div>
+
+                <div class="rowTab">
+                    <div class="labels">
                     <label id="number-label" for="age">Age:
-                        <input id="number" name="age" type="number" placeholder="Age" min="1" max="125" required>
+                        </div>
+                        <div class="rightTab">
+                        <input class="input-field" id="number" name="age" type="number" placeholder="Age" min="1" max="125" required>
                     </label>
+                    </div>
                 </div>
-                <div>
+
+
+                <div class="rowTab">
+                    <div class="labels">
                     <label for="jailTime">
                         Have you ever been in jail?
                     </label>
+                    </div>
+                    <div class="rightTab">
                     <select id="dropdown" name="jailTime" class="dropdown">
                         <option disabled value>Select Your Answer</option>
                         <option value="yes">Yes</option>
@@ -36,13 +57,18 @@
                         <option value="multiple">Many Times</option>
                         <option value="current">Currently in jail</option>
                     </select>
+                    </div>
                 </div>
-                <div>
+
+
+                <div class="rowTab">
+                    <div class="labels">
                     <label for="violentCrime">
                         Have you ever committed a violent crime?
                     </label>
-                    <div>
-                        <ul>
+                    </div>
+                    <div class="rightTab">
+                        <ul style="list-style: none;">
                             <li class="radio">
                                 <label>Yes<input name="violentCrime" type="radio" value="1"></label>
                                 <label>No<input name="violentCrime" type="radio" value="2"></label>
@@ -50,28 +76,37 @@
                         </ul>
                     </div>
                 </div>
-                <div>
+
+
+                <div class="rowTab">
+                    <div class="labels">
                     <label for="committedCrimes">
                         Please check all the crimes you have committed
                     </label>
-                </div>
-                <div>
-                    <ul id="crimesCommitted">
-                        <li><label><input name="crime" value="1" type="checkbox">Traffic Violation</label></li>
-                        <li><label><input name="crime" value="2" type="checkbox">Misdemeanor</label></li>
-                        <li><label><input name="crime" value="3" type="checkbox">Felony</label></li>
-                        <li><label><input name="crime" value="4" type="checkbox">Drug Related Crime</label></li>
-                        <li><label><input name="crime" value="5" type="checkbox">Sex Related Crime</label></li>
-                        <li><label><input name="crime" value="6" type="checkbox">Homocide</label></li>
+                    </div>
+                <div class="rightTab">
+                    <ul style="list-style: none;" id="crimesCommitted">
+                        <li class="checkbox"><label><input name="crime" value="1" type="checkbox">Traffic Violation</label></li>
+                        <li class="checkbox"><label><input name="crime" value="2" type="checkbox">Misdemeanor</label></li>
+                        <li class="checkbox"><label><input name="crime" value="3" type="checkbox">Felony</label></li>
+                        <li class="checkbox"><label><input name="crime" value="4" type="checkbox">Drug Related Crime</label></li>
+                        <li class="checkbox"><label><input name="crime" value="5" type="checkbox">Sex Related Crime</label></li>
+                        <li class="checkbox"><label><input name="crime" value="6" type="checkbox">Homocide</label></li>
                     </ul>
                 </div>
-                <div>
+
+                <div class="rowTab">
+                    <div class="labels">
                     <label for="additionalCrime">
                         Write any additional crimes
                     </label>
-                    <textarea id="additionalCrime" name="additionalCrime" placeholder="Enter your crimes here"></textarea>
+                    </div>
+                    <div class="rightTab">
+                    <textarea class="input-field" id="additionalCrime" name="additionalCrime" placeholder="Enter your crimes here"></textarea>
                 </div>
-                <button id="submit" type="submit">Submit</button>
+                </div>
+
+                <button class="submit-btn" id="submit" type="submit">Submit</button>
             </form>
         </div>
 
