@@ -3,12 +3,55 @@
 * {
   box-sizing: border-box;
   background-color: rgb(233, 233, 233);
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.2em;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
+#nav-bar {
+  padding-top: 15px;
+  padding-left: 15px;
+  position: fixed;
+  width: 100%;
+}
+
+#nav-bar ul {
+  float: right;
+}
+
+#nav-bar li {
+  display: inline;
+  list-style: none;
+  padding-right: 25px;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.body-container {
+  padding-top: 100px;
+  width: 80%;
+  margin: auto;
+
+}
+
 .main-heading {
   font-family: 'Sniglet', cursive;
+  display: inline-block;
+}
+
+.email-container {
+  text-align: center;
+}
+
+.email-input {
+  padding-top: 20px;
+}
+
+.email-input input {
+
 }
