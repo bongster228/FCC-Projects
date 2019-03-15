@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>C++ Documentation</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+
+        <nav id="nav-bar">
+            <header><h1>C++ Documentation</h1></header>
+            <ul>
+                <li><a href="#Introduction">Introduction</a></li>
+                <li><a href="#Preprocessor">Preprocessor</a></li>
+                <li><a href="#Initialization">Initialization</a></li>
+                <li><a href="#Functions">Functions</a></li>
+                <li><a href="#Statements">Statements</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-doc">
+
+        <section class="main-section" id="Introduction">
+            <header><h1 class="section-header">Introduction</h1></header>
+            <article>
+            <p>This section provides definitions for the specific terminology and the concepts used when describing the C++ programming language.
+            A C++ program is a sequence of text files (typically header and source files) that contain declarations. They undergo translation to 
+            become an executable program, which is executed when the C++ implementation calls its main function.
+            Certain words in a C++ program have special meaning, and these are known as keywords. Others can be used as identifiers. Comments are
+            ignored during translation. Certain characters in the program have to be represented with escape sequences.
+            The entities of a C++ program are values, objects, references, structured bindings (since C++17), functions, enumerators, types,
+            class members, templates, template specializations, namespaces, and parameter packs. Preprocessor macros are not C++ entities.
+            Entities are introduced by declarations, which associate them with names and define their properties. The declarations that
+            define all properties required to use an entity are definitions. A program must contain only one definition of any non-inline function
+            or variable that is odr-used.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Preprocessor">
+            <header><h1 class="section-header">Preprocessor</h1></header>
+            <article>
+                <p>The preprocessor is executed at translation phase 4, before the compilation. The result of preprocessing is a single file
+                which is then passed to the actual compiler.</p>
+                <h3>Directives</h3>
+                <p>The preprocessing directives control the behavior of the preprocessor. Each directive occupies one line and ahs the folowing
+                    format:
+                    <ul>
+                        <li># Character</li>
+                        <li>Preprocessing instruction</li>
+                        <li>Arguments</li>
+                        <li>Line break</li>
+                    </ul>
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Initialization">
+            <header><h1 class="section-header">Initialization</h1></header>
+            <article>
+                <p>The initial value may be provided in the initializer section of a declarator or a new expression. It also takes plac
+                during function calls: function parameters and the function return values are also initialized.
+                For each declarator, the initializer may be one of the following:</p>
+                <code>
+                    (expression-list)   (1)
+                    = expression        (2)
+                    {initializer-list}      (3)
+                </code>
+                <h3>Non-Local Variables</h3>
+                <p>All non-local variables with static storage duration are initialized as part of program startup, before the execution of
+                the main function begins (unless deferred, see below). All variables with thread-local storage duration are initialized as
+                part of thread launch, sequenced-before the execution of the thread function begins. For both of these classes of variables,
+                initialization occurs in two distinct stages:</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Functions">
+            <header><h1 class="section-header">Functions</h1></header>
+            <article>
+                <p>A function declaration may appear in any scope, but a function definition may only appear in namespace scope or, for member
+                and friend functions, in class scope. A function that is declared in a class body without a friend specifier is a class
+                member function. Such functions have many additional properties, see member functions for details.
+                Functions are not objects: there are no arrays of functions and functions cannot be passed by value or returned from other
+                functions. Pointers and references to functions are allowed, and may be used where functions themselves cannot.</p>
+                <code>
+                        // function name: "isodd"
+                        // parameter list has one parameter,
+                        // with name "n" and type int
+                        // the return type is bool
+                        bool isodd(int n)
+                        {                      // the body of the function begins
+                            return n % 2;
+                        }                      // the body of the function ends
+                </code>
+                <p>Each function has a type, which consists of the function's return type, the types of all parameters (after array-to-pointer
+                and function-to-pointer transformations, see parameter list) , whether the function is noexcept or not (since C++17),
+                and, for member functions, cv-qualification and ref-qualification. Function types also have language linkage.
+                There are no cv-qualified function types (not to be confused with the types of cv-qualified functions such as
+                int f() const; or functions returning cv-qualified types, such as std::string const f();)</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Statements">
+            <header><h1 class="section-header">Statements</h1></header>
+            <article>
+                <p>Statements are fragments of the C++ program that are executed in sequence. The body of any function is a sequence
+                of statements. For example:</p>
+                <code>
+                        int main()
+                        {
+                            int n = 1;                        // declaration statement
+                            n = n + 1;                        // expression statement
+                            std::cout << "n = " << n << '\n'; // expression statement
+                            return 0;                         // return statement
+                        }   
+                </code>
+            <p>C++ includes the following types of statements:</p>
+            <ol>
+                <li>Expression Statements</li>
+                <li>Compound Statements</li>
+                <li>Selection Statements</li>
+                <li>Iteration Statements</li>
+                <li>Jump Statements</li>
+                <li>Declaration Statements</li>
+                <li>Try Blocks</li>
+                <li>Atomic and Syncrhonized Blocks</li>
+            </ol>
+            <h3>Compound Statements</h3>
+            <code>
+                    if (x > 5)          // start of if statement
+                    {                   // start of block
+                        int n = 1;      // declaration statement
+                        std::cout << n; // expression statement
+                    }                   // end of block, end of if statement
+            </code>
+            <code>
+                    int main()
+                    {
+                        {                                // start of block
+                            std::ofstream f("test.txt"); // declaration statement
+                            f << "abc\n";                // expression statement
+                        }                                // end of block: f is flushed and closed
+                        std::ifstream f("test.txt"); 
+                        std::string str;
+                        f >> str; 
+                    }
+            </code>
+            <h3>While Loop</h3>
+            <code>
+                    #include &lt;iostream&gt;
+ 
+                            int main() {
+                            // while loop with a single statement
+                                int i = 0;
+                                while (i < 10)
+                                     i++;
+                                std::cout << i << '\n';
+                             
+                                // while loop with a compound statement
+                                int j = 2;
+                                while (j < 9) {
+                                    std::cout << j << ' ';
+                                    j += 2;
+                                }
+                                std::cout << '\n';
+                             
+                               // while loop with a declaration condition
+                               char cstr[] = "Hello";
+                               int k = 0;
+                               while (char c = cstr[k++])
+                                   std::cout << c;
+                               std::cout << '\n';
+                            }
+            </code>
+            </article>
+        </section>
+
+        </main>
+    </body>
+
+</html>

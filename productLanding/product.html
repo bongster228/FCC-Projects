@@ -7,23 +7,29 @@
     <body>
 
         <header>
-            <nav id="nav-bar"><img id="header-img" width="50px" src='../productLanding/img/sweatshirt.png'>
-                <h1 class="main-heading">The Hoody</h1>
-                <ul class="nav-link">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                </ul>
+            <nav id="nav-bar">
+                <div class="nav-container">
+                    <img id="header-img" width="100px" height="100px" src="img/sweatshirt.png">
+                    <h1 class="main-heading">The Hoody</h1>
+                <div class="nav-link">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#video">Video</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                </div>
             </nav>
+
         </header>
 
         <div class="body-container">
 
         <div id="form" class="email-container">
-            <form class="email-form">
+            <form class="email-form" action="https://www.freecodecamp.com/email-submit">
                 <h2>Hand-made Tailored Hoody</h2>
                 <div class="email-input">
-                    <input id="email" type="email" name="email" placeholder="Enter your email address">
+                    <input id="email" class="input-box" type="email" name="email" placeholder="Enter your email address" requ>
                     <input id="submit" class="button" type="submit" value="GET STARTED">
                 </div>
             </form>
@@ -31,62 +37,74 @@
 
         <div id="about" class="about-container">
             <div class="about">
-                <img width="80px" src="img/pullOver.png">
+                <img src="img/pullOver.png">
+                <div class="product-description">
                 <h3>The Pullover</h3>
-                <p>A hoody without a hoody. A custom tailor made
-                    sweatshirt.Proving the point that not all hoodies
-                    are made equal.
-                </p>
+                    <p>A hoody without a hoody. A custom tailor made
+                        sweatshirt. Proving the point that not all hoodies
+                        are made equal.
+                    </p>
+                </div>
             </div>
 
             <div class="about">
-                <img width="80px" src="img/zipUp.png">
-                <h3>The Zip Up</h3>
-                <p>A hoody with a zippy. A custom made hoody that is able
-                    to open up in the front. Zipper comes with life-time
-                    warranty.
-                </p>
+                <img src="img/zipUp.png">
+                <div class="product-description">
+                    <h3>The Zip Up</h3>
+                    <p>A hoody with a zippy. A custom made hoody that is able
+                        to open up in the front. Zipper comes with life-time
+                        warranty.
+                    </p>
+                </div>
             </div>
 
             <div class="about">
-                <img width="80px" src="img/classic.png">
-                <h3>The Classic</h3>
-                <p>The original hoody. Comes with all the right feautres.
-                    Custom made to fit any body-type and any style.
-                </p>
+                <img src="img/classic.png">
+                <div class="product-description">
+                    <h3>The Classic</h3>
+                    <p>The original hoody. Comes with all the right feautres.
+                        Custom made to fit any body-type and any style.
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div id="features" class="features-container">
+        <div id="video" class="features-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/2U4WN3XqyVc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div id="pricing" class="pricing-container">
             <div class="pricing">
                 <h3>The Pullover</h3>
-                <p>Lorem ipsum.
-                    Lorem ipsum.
-                    Lorem ipsum dolor.
-                    Lorem ipsum.</p>
-                <input type="button" value="SELECT">
+                <ul>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ul>
+                <input type="button" class="button" value="SELECT">
             </div>
 
             <div class="pricing">
                 <h3>The Pullover</h3>
-                <p>Lorem ipsum.
-                Lorem ipsum.
-                Lorem ipsum dolor.
-                Lorem ipsum.</p>
-                <input type="button" value="SELECT">
+                <ul>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ul>
+                <input type="button" class="button" value="SELECT">
             </div>
 
             <div class="pricing">
                 <h3>The Pullover</h3>
-                <p>Lorem ipsum.
-                Lorem ipsum.
-                Lorem ipsum dolor.
-                Lorem ipsum.</p>
-                <input type="button" value="SELECT">
+                <ul>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Lorem ipsum.</li>
+                </ul>
+                <input type="button" class="button" value="SELECT">
             </div>
         </div>
 
